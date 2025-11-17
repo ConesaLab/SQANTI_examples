@@ -1,0 +1,23 @@
+[INFO:2025-06-20 10:31:59,784] Running SQANTI3 rescue pipeline version 5.4
+[INFO:2025-06-20 10:31:59,784] ----------------------------------------------------------
+[INFO:2025-06-20 10:31:59,785]   Initializing SQANTI3 rescue pipeline in automatic mode  
+[INFO:2025-06-20 10:31:59,785] ----------------------------------------------------------
+[INFO:2025-06-20 10:31:59,785] --------------------------------------------------
+[INFO:2025-06-20 10:31:59,785]         Reading filter classification file        
+[INFO:2025-06-20 10:31:59,785] --------------------------------------------------
+[INFO:2025-06-20 10:31:59,818] --------------------------------------------------
+[INFO:2025-06-20 10:31:59,818]            Performing automatic rescue            
+[INFO:2025-06-20 10:31:59,818] --------------------------------------------------
+[INFO:2025-06-20 10:31:59,851] --------------------------------------------------
+[INFO:2025-06-20 10:31:59,851]             Automatic rescue completed            
+[INFO:2025-06-20 10:31:59,851] --------------------------------------------------
+[INFO:2025-06-20 10:31:59,851] Creating reference transcriptome FASTA from provided GTF (--refGTF).
+[INFO:2025-06-20 10:32:00,089] Reference transcriptome FASTA was saved to example/rescue_automatic/gencode.v38.basic_chr22.fasta
+[INFO:2025-06-20 10:32:00,089] --------------------------------------------------
+[INFO:2025-06-20 10:32:00,089]              Generating rescued GTF.              
+[INFO:2025-06-20 10:32:00,089] --------------------------------------------------
+[INFO:2025-06-20 10:32:00,234] Final output GTF written to file:  example/rescue_automatic/UHR_chr22_rescued.gtf
+[INFO:2025-06-20 10:32:00,417] Rescued FASTA written to file: example/rescue_automatic/UHR_chr22_rescued.fasta
+[INFO:2025-06-20 10:32:00,417] --------------------------------------------------
+[INFO:2025-06-20 10:32:00,417]           Rescue finished successfully!           
+[INFO:2025-06-20 10:32:00,417] --------------------------------------------------

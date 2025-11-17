@@ -1,0 +1,48 @@
+[INFO:2025-06-20 10:21:55,358] Write arguments to /home/pabloati/Programs/sqanti3/example/SQANTI3_QC_output/UHR_chr22.qc_params.txt...
+[INFO:2025-06-20 10:21:55,358] Initialising QC pipeline.
+[INFO:2025-06-20 10:21:55,358] Parsing provided files
+[INFO:2025-06-20 10:21:55,358] Reading genome fasta data/reference/GRCh38.p13_chr22.fasta
+[INFO:2025-06-20 10:21:55,543] **** Correcting sequences
+[INFO:2025-06-20 10:21:55,543] Correcting fasta
+[INFO:2025-06-20 10:21:55,543] Skipping aligning of sequences because GTF file was provided.
+[INFO:2025-06-20 10:21:55,574] Indels will be not calculated since you ran SQANTI3 without alignment step (SQANTI3 with gtf format as transcriptome input).
+[INFO:2025-06-20 10:21:55,793] **** Predicting ORF sequences...
+[INFO:2025-06-20 10:21:55,793] Running ORF prediction on /home/pabloati/Programs/sqanti3/example/SQANTI3_QC_output/UHR_chr22_corrected.fasta
+[INFO:2025-06-20 10:21:55,793] Running TD2 ORF search on /home/pabloati/Programs/sqanti3/example/SQANTI3_QC_output/UHR_chr22_corrected.fasta...
+[INFO:2025-06-20 10:22:36,512] **** Parsing Reference Transcriptome....
+[INFO:2025-06-20 10:22:36,887] **** Parsing Isoforms.
+[INFO:2025-06-20 10:22:36,966] **** Running STAR for calculating Short-Read Coverage.
+[INFO:2025-06-20 10:22:36,966] ** Running indexing.
+[INFO:2025-06-20 10:23:26,168] Indexing done.
+[INFO:2025-06-20 10:23:26,168] ** Running mapping.
+[INFO:2025-06-20 10:23:26,168] Mapping for UHR_Rep1_chr22: in progress.
+[INFO:2025-06-20 10:24:50,049] Mapping for UHR_Rep1_chr22: done.
+[INFO:2025-06-20 10:24:50,049] Mapping for UHR_Rep2_chr22: in progress.
+[INFO:2025-06-20 10:25:55,607] Mapping for UHR_Rep2_chr22: done.
+[INFO:2025-06-20 10:25:55,607] Input pattern: example/SQANTI3_QC_output/STAR_mapping/.
+The following files found and to be read as junctions:
+example/SQANTI3_QC_output/STAR_mapping/UHR_Rep2_chr22SJ.out.tab
+example/SQANTI3_QC_output/STAR_mapping/UHR_Rep1_chr22SJ.out.tab
+[INFO:2025-06-20 10:25:55,625] 6762 junctions read. 2 junctions added to both strands because no strand information from STAR.
+[INFO:2025-06-20 10:25:55,625] **** Running calculation of TSS ratio
+[INFO:2025-06-20 10:25:55,846] BAM files identified: ['example/SQANTI3_QC_output/STAR_mapping/UHR_Rep2_chr22Aligned.sortedByCoord.out.bam', 'example/SQANTI3_QC_output/STAR_mapping/UHR_Rep1_chr22Aligned.sortedByCoord.out.bam']
+[INFO:2025-06-20 10:25:57,609] **** Reading CAGE Peak data.
+[INFO:2025-06-20 10:25:58,241] **** Reading PolyA motif list.
+[INFO:2025-06-20 10:25:58,241] **** Performing Classification of Isoforms
+[INFO:2025-06-20 10:26:05,778] Number of classified isoforms: 3925
+[INFO:2025-06-20 10:26:05,785] After classify fsm: 3925
+[INFO:2025-06-20 10:26:05,786] **** Reading Full-length read abundance files.
+[INFO:2025-06-20 10:26:05,791] Single-sample PacBio FL count format detected.
+[INFO:2025-06-20 10:26:05,793] RT-switching computation
+[INFO:2025-06-20 10:26:05,963] After RTS classificaion: 3925
+[INFO:2025-06-20 10:26:05,963] **** Adding TSS ratio data.
+[INFO:2025-06-20 10:26:05,967] **** Running Kallisto to calculate isoform expressions. 
+[INFO:2025-06-20 10:26:05,967] Running kallisto index example/SQANTI3_QC_output/kallisto_output/kallisto_corrected_fasta.idx using as reference /home/pabloati/Programs/sqanti3/example/SQANTI3_QC_output/UHR_chr22_corrected.fasta
+[INFO:2025-06-20 10:26:11,084] ** Running Kallisto quantification for UHR_Rep1_chr22 sample
+[INFO:2025-06-20 10:26:16,700] ** Running Kallisto quantification for UHR_Rep2_chr22 sample
+[INFO:2025-06-20 10:26:21,772] Detected Kallisto expression format. Using 'target_id' and 'tpm' field.
+[INFO:2025-06-20 10:26:21,779] Detected Kallisto expression format. Using 'target_id' and 'tpm' field.
+[INFO:2025-06-20 10:26:21,947] Writing output files
+[INFO:2025-06-20 10:26:22,766] **** Generating SQANTI3 report.
+[INFO:2025-06-20 10:27:04,378] Removing temporary files.
+[INFO:2025-06-20 10:27:04,378] SQANTI3 complete in 309.0202535180142 sec.

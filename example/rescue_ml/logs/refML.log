@@ -1,0 +1,34 @@
+INFO:
+               length                 exons      diff_to_gene_TSS 
+                FALSE                 FALSE                 FALSE 
+     diff_to_gene_TTS             RTS_stage        min_sample_cov 
+                FALSE                 FALSE                 FALSE 
+              min_cov                sd_cov                    FL 
+                FALSE                 FALSE                 FALSE 
+                 bite               iso_exp              gene_exp 
+                FALSE                 FALSE                 FALSE 
+            ratio_exp             FSM_class                coding 
+                FALSE                 FALSE                 FALSE 
+        predicted_NMD perc_A_downstream_TTS     dist_to_CAGE_peak 
+                FALSE                 FALSE                 FALSE 
+     within_CAGE_peak            polyA_dist     polyA_motif_found 
+                FALSE                 FALSE                 FALSE 
+            ratio_TSS 
+                FALSE 
+               length                 exons      diff_to_gene_TSS 
+            "integer"             "integer"             "integer" 
+     diff_to_gene_TTS             RTS_stage        min_sample_cov 
+            "integer"             "logical"             "integer" 
+              min_cov                sd_cov                    FL 
+            "integer"             "numeric"             "integer" 
+                 bite               iso_exp              gene_exp 
+             "factor"             "numeric"             "numeric" 
+            ratio_exp             FSM_class                coding 
+            "integer"              "factor"              "factor" 
+        predicted_NMD perc_A_downstream_TTS     dist_to_CAGE_peak 
+             "factor"             "numeric"             "integer" 
+     within_CAGE_peak            polyA_dist     polyA_motif_found 
+             "factor"             "integer"              "factor" 
+            ratio_TSS 
+          "character" 
+

@@ -1,0 +1,48 @@
+[INFO:2025-06-20 10:39:22,157] Running SQANTI3 rescue pipeline version 5.4
+[INFO:2025-06-20 10:39:22,157] -----------------------------------------------------
+[INFO:2025-06-20 10:39:22,157]   Initializing SQANTI3 rescue pipeline in full mode  
+[INFO:2025-06-20 10:39:22,157] -----------------------------------------------------
+[INFO:2025-06-20 10:39:22,157] --------------------------------------------------
+[INFO:2025-06-20 10:39:22,157]         Reading filter classification file        
+[INFO:2025-06-20 10:39:22,157] --------------------------------------------------
+[INFO:2025-06-20 10:39:22,190] --------------------------------------------------
+[INFO:2025-06-20 10:39:22,190]            Performing automatic rescue            
+[INFO:2025-06-20 10:39:22,190] --------------------------------------------------
+[INFO:2025-06-20 10:39:22,221] --------------------------------------------------
+[INFO:2025-06-20 10:39:22,221]             Automatic rescue completed            
+[INFO:2025-06-20 10:39:22,221] --------------------------------------------------
+[INFO:2025-06-20 10:39:22,221] Creating reference transcriptome FASTA from provided GTF (--refGTF).
+[INFO:2025-06-20 10:39:22,444] Reference transcriptome FASTA was saved to example/rescue_rules/gencode.v38.basic_chr22.fasta
+[INFO:2025-06-20 10:39:23,510] --------------------------------------------------
+[INFO:2025-06-20 10:39:23,510]     Preparation of files for artifact mapping:    
+[INFO:2025-06-20 10:39:23,510] --------------------------------------------------
+[INFO:2025-06-20 10:39:23,511] Filtering reference transcriptome FASTA to only rescue targets.
+[INFO:2025-06-20 10:39:23,594] Filtering supplied long read transcriptome FASTA (--isoforms) to only include rescue targets...
+[INFO:2025-06-20 10:39:23,756] Creating rescue candidate FASTA from supplied long read transcriptome fasta (--isoforms)...
+[INFO:2025-06-20 10:39:23,845] --------------------------------------------------
+[INFO:2025-06-20 10:39:23,845]      Artifact mapping (candidates vs targets)     
+[INFO:2025-06-20 10:39:23,845] --------------------------------------------------
+[INFO:2025-06-20 10:39:23,845] Mapping rescue candidates to rescue targets with minimap2...
+[INFO:2025-06-20 10:39:25,265] Minimap2 results were saved to example/rescue_rules/UHR_chr22_mapped_rescue.sam
+[INFO:2025-06-20 10:39:25,265] Building candidate-target table of mapping hits...
+[INFO:2025-06-20 10:39:25,292] Mapping hit table was saved to example/rescue_rules/UHR_chr22_rescue_mapping_hits.tsv
+[INFO:2025-06-20 10:39:25,294] --------------------------------------------------
+[INFO:2025-06-20 10:39:25,294]         Rescue-by-mapping for rules filter        
+[INFO:2025-06-20 10:39:25,294] --------------------------------------------------
+[INFO:2025-06-20 10:39:25,294] --------------------------------------------------
+[INFO:2025-06-20 10:39:25,294]               Rules rescue selected               
+[INFO:2025-06-20 10:39:25,294] --------------------------------------------------
+[INFO:2025-06-20 10:39:25,294] Applying provided rules (--json_filter) to reference transcriptome classification file.
+[INFO:2025-06-20 10:39:26,180] Running rescue-by-mapping for rules filter.
+[INFO:2025-06-20 10:39:27,968] --------------------------------------------------
+[INFO:2025-06-20 10:39:27,969]        Rescue rules finished successfully!        
+[INFO:2025-06-20 10:39:27,969] --------------------------------------------------
+[INFO:2025-06-20 10:39:27,969] Final rescued transcript list written to file: example/rescue_rules/UHR_chr22_full_inclusion_list.tsv
+[INFO:2025-06-20 10:39:27,969] --------------------------------------------------
+[INFO:2025-06-20 10:39:27,969]              Generating rescued GTF.              
+[INFO:2025-06-20 10:39:27,969] --------------------------------------------------
+[INFO:2025-06-20 10:39:28,124] Final output GTF written to file:  example/rescue_rules/UHR_chr22_rescued.gtf
+[INFO:2025-06-20 10:39:28,305] Rescued FASTA written to file: example/rescue_rules/UHR_chr22_rescued.fasta
+[INFO:2025-06-20 10:39:28,305] --------------------------------------------------
+[INFO:2025-06-20 10:39:28,305]           Rescue finished successfully!           
+[INFO:2025-06-20 10:39:28,305] --------------------------------------------------

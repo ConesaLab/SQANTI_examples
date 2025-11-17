@@ -1,0 +1,50 @@
+[INFO:2025-06-20 10:39:28,997] Running SQANTI3 rescue pipeline version 5.4
+[INFO:2025-06-20 10:39:28,997] -----------------------------------------------------
+[INFO:2025-06-20 10:39:28,997]   Initializing SQANTI3 rescue pipeline in full mode  
+[INFO:2025-06-20 10:39:28,997] -----------------------------------------------------
+[INFO:2025-06-20 10:39:28,997] --------------------------------------------------
+[INFO:2025-06-20 10:39:28,997]         Reading filter classification file        
+[INFO:2025-06-20 10:39:28,997] --------------------------------------------------
+[INFO:2025-06-20 10:39:29,032] --------------------------------------------------
+[INFO:2025-06-20 10:39:29,032]            Performing automatic rescue            
+[INFO:2025-06-20 10:39:29,032] --------------------------------------------------
+[INFO:2025-06-20 10:39:29,039] No lost references found
+[INFO:2025-06-20 10:39:29,039] Automatic rescue is not needed
+[INFO:2025-06-20 10:39:29,040] --------------------------------------------------
+[INFO:2025-06-20 10:39:29,040]             Automatic rescue completed            
+[INFO:2025-06-20 10:39:29,040] --------------------------------------------------
+[INFO:2025-06-20 10:39:29,041] Creating reference transcriptome FASTA from provided GTF (--refGTF).
+[INFO:2025-06-20 10:39:29,264] Reference transcriptome FASTA was saved to example/rescue_ml/gencode.v38.basic_chr22.fasta
+[INFO:2025-06-20 10:39:30,183] --------------------------------------------------
+[INFO:2025-06-20 10:39:30,183]     Preparation of files for artifact mapping:    
+[INFO:2025-06-20 10:39:30,183] --------------------------------------------------
+[INFO:2025-06-20 10:39:30,183] Filtering reference transcriptome FASTA to only rescue targets.
+[INFO:2025-06-20 10:39:30,266] Filtering supplied long read transcriptome FASTA (--isoforms) to only include rescue targets...
+[INFO:2025-06-20 10:39:30,421] Creating rescue candidate FASTA from supplied long read transcriptome fasta (--isoforms)...
+[INFO:2025-06-20 10:39:30,534] --------------------------------------------------
+[INFO:2025-06-20 10:39:30,534]      Artifact mapping (candidates vs targets)     
+[INFO:2025-06-20 10:39:30,534] --------------------------------------------------
+[INFO:2025-06-20 10:39:30,534] Mapping rescue candidates to rescue targets with minimap2...
+[INFO:2025-06-20 10:39:32,842] Minimap2 results were saved to example/rescue_ml/UHR_chr22_mapped_rescue.sam
+[INFO:2025-06-20 10:39:32,842] Building candidate-target table of mapping hits...
+[INFO:2025-06-20 10:39:32,878] Mapping hit table was saved to example/rescue_ml/UHR_chr22_rescue_mapping_hits.tsv
+[INFO:2025-06-20 10:39:32,880] --------------------------------------------------
+[INFO:2025-06-20 10:39:32,881]          Rescue-by-mapping for ML filter          
+[INFO:2025-06-20 10:39:32,881] --------------------------------------------------
+[INFO:2025-06-20 10:39:32,881] --------------------------------------------------
+[INFO:2025-06-20 10:39:32,881]                ML rescue selected!                
+[INFO:2025-06-20 10:39:32,881] --------------------------------------------------
+[INFO:2025-06-20 10:39:32,881] Running pre-trained random forest on reference transcriptome classification file.
+[INFO:2025-06-20 10:39:35,251] Running rescue-by-mapping for ML filter.
+[INFO:2025-06-20 10:39:37,298] --------------------------------------------------
+[INFO:2025-06-20 10:39:37,298]          Rescue ml finished successfully!         
+[INFO:2025-06-20 10:39:37,298] --------------------------------------------------
+[INFO:2025-06-20 10:39:37,298] Final rescued transcript list written to file: example/rescue_ml/UHR_chr22_full_inclusion_list.tsv
+[INFO:2025-06-20 10:39:37,298] --------------------------------------------------
+[INFO:2025-06-20 10:39:37,298]              Generating rescued GTF.              
+[INFO:2025-06-20 10:39:37,298] --------------------------------------------------
+[INFO:2025-06-20 10:39:37,448] Final output GTF written to file:  example/rescue_ml/UHR_chr22_rescued.gtf
+[INFO:2025-06-20 10:39:37,607] Rescued FASTA written to file: example/rescue_ml/UHR_chr22_rescued.fasta
+[INFO:2025-06-20 10:39:37,608] --------------------------------------------------
+[INFO:2025-06-20 10:39:37,608]           Rescue finished successfully!           
+[INFO:2025-06-20 10:39:37,608] --------------------------------------------------
