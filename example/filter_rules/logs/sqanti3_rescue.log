@@ -1,0 +1,2 @@
+[WARNING:2026-01-29 15:10:17,954] Output directory example/filter_rules already exists. Overwriting!
+[ERROR:2026-01-29 15:10:18,040] When running the rescue in full mode, the reference classification file is mandatory.

@@ -1,0 +1,18 @@
+[WARNING:2026-01-29 15:36:42,108] Output directory example/filter_rules already exists. Overwriting!
+[INFO:2026-01-29 15:36:42,109] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/filter_rules/UHR_chr22_params.txt...
+[INFO:2026-01-29 15:36:42,109] Running SQANTI3 filtering...
+[INFO:2026-01-29 15:36:42,109] --------------------------------------------------
+[INFO:2026-01-29 15:36:42,109]        Reading SQANTI3 classification file        
+[INFO:2026-01-29 15:36:42,109] --------------------------------------------------
+[INFO:2026-01-29 15:36:42,152] --------------------------------------------------
+[INFO:2026-01-29 15:36:42,152]                 Reading JSON rules                
+[INFO:2026-01-29 15:36:42,152] --------------------------------------------------
+[INFO:2026-01-29 15:36:42,153] --------------------------------------------------
+[INFO:2026-01-29 15:36:42,153]         Applying rules to filter isoforms         
+[INFO:2026-01-29 15:36:42,153] --------------------------------------------------
+[INFO:2026-01-29 15:36:44,043] --------------------------------------------------
+[INFO:2026-01-29 15:36:44,043]                  Writing results                  
+[INFO:2026-01-29 15:36:44,043] --------------------------------------------------
+[INFO:2026-01-29 15:36:47,395] Output written to: example/filter_rules/UHR_chr22.filtered.fasta
+[INFO:2026-01-29 15:36:47,831] Output written to: example/filter_rules/UHR_chr22.filtered.gtf
+[INFO:2026-01-29 15:36:47,850] Output written to: example/filter_rules/UHR_chr22.filtered.faa

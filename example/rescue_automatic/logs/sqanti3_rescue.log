@@ -1,0 +1,36 @@
+[INFO:2026-01-29 15:55:28,201] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/rescue_automatic/UHR_chr22_rescue_params.txt...
+[INFO:2026-01-29 15:55:28,201] Running SQANTI3 rescue pipeline version 6.0.0
+[INFO:2026-01-29 15:55:28,201] ----------------------------------------------------------
+[INFO:2026-01-29 15:55:28,202]   Initializing SQANTI3 rescue pipeline in automatic mode  
+[INFO:2026-01-29 15:55:28,202] ----------------------------------------------------------
+[INFO:2026-01-29 15:55:28,202] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,202]         Reading filter classification file        
+[INFO:2026-01-29 15:55:28,202] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,234] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,234]            Performing automatic rescue            
+[INFO:2026-01-29 15:55:28,234] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,307] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,307]             Automatic rescue completed            
+[INFO:2026-01-29 15:55:28,307] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,307] Creating reference transcriptome FASTA from provided GTF (--refGTF).
+[INFO:2026-01-29 15:55:28,556] Reference transcriptome FASTA was saved to example/rescue_automatic/gencode.v38.basic_chr22.isoforms.fasta
+[INFO:2026-01-29 15:55:28,556] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,556]              Generating rescued GTF.              
+[INFO:2026-01-29 15:55:28,556] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,557] Final inclusion list written to file: example/rescue_automatic/UHR_chr22_rescue_inclusion_list.tsv
+[INFO:2026-01-29 15:55:28,558] Final rescue table written to file: example/rescue_automatic/UHR_chr22_rescue_table.tsv
+[INFO:2026-01-29 15:55:28,643] Final output GTF written to file:  example/rescue_automatic/UHR_chr22_rescued.gtf
+[INFO:2026-01-29 15:55:28,763] Rescued FASTA written to file: example/rescue_automatic/UHR_chr22_rescued.fasta
+[WARNING:2026-01-29 15:55:28,763] No reference classification provided.
+[WARNING:2026-01-29 15:55:28,763] Rescued classification will only include the user-defined isoforms.
+[INFO:2026-01-29 15:55:28,868] Rescued classification written to file: example/rescue_automatic/UHR_chr22_rescued_classification.tsv
+[INFO:2026-01-29 15:55:28,868] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,868]           Rescue finished successfully!           
+[INFO:2026-01-29 15:55:28,868] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,868] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,868]             Running requantification.             
+[INFO:2026-01-29 15:55:28,868] --------------------------------------------------
+[INFO:2026-01-29 15:55:28,872] Counts file parsed.
+[INFO:2026-01-29 15:55:28,923] Requantification of counts completed.
+[INFO:2026-01-29 15:55:28,923] New count table saved to example/rescue_automatic/UHR_chr22_reassigned_counts.tsv
+[INFO:2026-01-29 15:55:29,030] Requantification finished!

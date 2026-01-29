@@ -2,3 +2,87 @@ INFO:
 null device 
           1 
 
+INFO:
+
+-------------------------------------------------
+
+ 	 SQANTI3 Machine Learning filter report
+
+--------------------------------------------------
+Loading required package: magrittr
+
+Reading ML result classification table...
+
+Reading classifier variable importance table...
+Rows: 23 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (1): variable
+dbl (1): importance
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+Reading ML filter parameters...
+Rows: 23 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (2): parameter, value
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+Reading ML performance statistics...
+Rows: 18 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (1): metric
+dbl (1): value
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 4 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (2): Prediction, Reference
+dbl (1): Freq
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Loading required package: ggplot2
+
+Generating common filter plots...
+
+
+Generating machine learning filter plots...
+
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+`summarise()` has grouped output by 'structural_category', 'filter_result'. You
+can override using the `.groups` argument.
+Warning message:
+Using an external vector in selections was deprecated in tidyselect 1.1.0.
+ℹ Please use `all_of()` or `any_of()` instead.
+  # Was:
+  data %>% select(variable)
+
+  # Now:
+  data %>% select(all_of(variable))
+
+See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>. 
+
+Generating ML filter intra-priming plots...
+
+
+Writing report plots to PDF file...
+

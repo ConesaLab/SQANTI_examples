@@ -1,0 +1,12 @@
+INFO:
+
+[build] loading fasta file /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.fasta
+[build] k-mer length: 31
+[build] warning: clipped off poly-A tail (longer than 10)
+        from 9 target sequences
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 16856 contigs and contains 2675704 k-mers 
+
+

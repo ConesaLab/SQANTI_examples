@@ -1,34 +1,73 @@
 INFO:
-               length                 exons      diff_to_gene_TSS 
+                  end                length                 exons 
                 FALSE                 FALSE                 FALSE 
-     diff_to_gene_TTS             RTS_stage        min_sample_cov 
+            FSM_class      diff_to_gene_TSS      diff_to_gene_TTS 
                 FALSE                 FALSE                 FALSE 
-              min_cov                sd_cov                    FL 
+            RTS_stage        min_sample_cov               min_cov 
                 FALSE                 FALSE                 FALSE 
-                 bite               iso_exp              gene_exp 
+               sd_cov                    FL                  bite 
                 FALSE                 FALSE                 FALSE 
-            ratio_exp             FSM_class                coding 
+              iso_exp              gene_exp             ratio_exp 
                 FALSE                 FALSE                 FALSE 
-        predicted_NMD perc_A_downstream_TTS     dist_to_CAGE_peak 
+               coding         predicted_NMD perc_A_downstream_TTS 
                 FALSE                 FALSE                 FALSE 
-     within_CAGE_peak            polyA_dist     polyA_motif_found 
+    dist_to_CAGE_peak      within_CAGE_peak            polyA_dist 
                 FALSE                 FALSE                 FALSE 
-            ratio_TSS 
-                FALSE 
-               length                 exons      diff_to_gene_TSS 
+    polyA_motif_found             ratio_TSS 
+                FALSE                 FALSE 
+                  end                length                 exons 
             "integer"             "integer"             "integer" 
-     diff_to_gene_TTS             RTS_stage        min_sample_cov 
-            "integer"             "logical"             "integer" 
-              min_cov                sd_cov                    FL 
-            "integer"             "numeric"             "integer" 
-                 bite               iso_exp              gene_exp 
-             "factor"             "numeric"             "numeric" 
-            ratio_exp             FSM_class                coding 
-            "integer"              "factor"              "factor" 
-        predicted_NMD perc_A_downstream_TTS     dist_to_CAGE_peak 
-             "factor"             "numeric"             "integer" 
-     within_CAGE_peak            polyA_dist     polyA_motif_found 
-             "factor"             "integer"              "factor" 
-            ratio_TSS 
-          "character" 
+            FSM_class      diff_to_gene_TSS      diff_to_gene_TTS 
+             "factor"             "integer"             "integer" 
+            RTS_stage        min_sample_cov               min_cov 
+            "logical"             "integer"             "integer" 
+               sd_cov                    FL                  bite 
+            "numeric"             "integer"              "factor" 
+              iso_exp              gene_exp             ratio_exp 
+            "numeric"             "numeric"             "integer" 
+               coding         predicted_NMD perc_A_downstream_TTS 
+             "factor"              "factor"             "numeric" 
+    dist_to_CAGE_peak      within_CAGE_peak            polyA_dist 
+            "integer"              "factor"             "integer" 
+    polyA_motif_found             ratio_TSS 
+             "factor"           "character" 
+
+INFO:
+
+-------------------------------------------------------------------------
+
+	RUN PRE-TRAINED SQ3 ML CLASSIFIER RUN ON REFERENCE TRANSCRIPTOME
+
+
+-------------------------------------------------------------------------
+
+	Reading SQANTI3 classification file...
+
+
+	Performing ML filter data cleaning on classification...
+
+
+	Checking column compatibility with pre-trained random forest classifier...
+
+Loading required package: magrittr
+
+	Validating columns used in prediction...
+
+	Column-level NA check:
+
+	Column type check:
+
+	Running random forest classifier on reference transcriptome...
+
+
+	Random forest classifier run successfully!
+
+
+	Resulting isoform/artifact probabilities written to output file:
+
+
+		example/rescue_ml/UHR_chr22_reference_isoform_predict.tsv
+
+
+-------------------------------------------------------------------------
 

@@ -2,3 +2,25 @@ INFO:
 null device 
           1 
 
+INFO:
+
+-------------------------------------------------
+
+ 	 SQANTI3 Rules filter report
+
+--------------------------------------------------
+Loading required package: magrittr
+
+Reading Rules result classification table...
+Warning message:
+One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat <- vroom(...)
+  problems(dat) 
+Loading required package: ggplot2
+
+Generating common filter plots...
+
+
+Writing report plots to PDF file...
+

@@ -1,0 +1,6 @@
+[WARNING:2026-01-29 15:36:51,432] Output directory example/filter_ml already exists. Overwriting!
+[INFO:2026-01-29 15:36:51,432] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/filter_ml/UHR_chr22_params.txt...
+[INFO:2026-01-29 15:36:51,432] Running SQANTI3 filtering...
+[INFO:2026-01-29 15:42:27,074] Output written to: example/filter_ml/UHR_chr22.filtered.fasta
+[INFO:2026-01-29 15:42:27,505] Output written to: example/filter_ml/UHR_chr22.filtered.gtf
+[INFO:2026-01-29 15:42:27,523] Output written to: example/filter_ml/UHR_chr22.filtered.faa

@@ -1,0 +1,17 @@
+Version	6.0.0
+FilterClassification	/home/pabloati/Programs/SQANTI_examples/example/filter_rules/UHR_chr22_RulesFilter_classification.txt
+ReferenceGTF	/home/pabloati/Programs/SQANTI_examples/data/reference/gencode.v38.basic_chr22.gtf
+ReferenceFasta	/home/pabloati/Programs/SQANTI_examples/data/reference/GRCh38.p13_chr22.fasta
+CorrectedIsoformsFasta	/home/pabloati/Programs/SQANTI_examples/example/QC_isoforms/UHR_chr22_corrected.fasta
+FilteredIsoformsGTF	/home/pabloati/Programs/SQANTI_examples/example/filter_rules/UHR_chr22.filtered.gtf
+ReferenceClassification	/home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_classification.txt
+Counts	/home/pabloati/Programs/SQANTI_examples/data/UHR_abundance.tsv
+RescueMonoexonic	all
+Mode	full
+Requant	True
+Strategy	rules
+OutputPrefix	UHR_chr22
+OutputDirectory	/home/pabloati/Programs/SQANTI_examples/example/rescue_rules
+CPUs	4
+LogLevel	INFO
+JSON	/home/pabloati/Programs/sqanti3/src/utilities/filter/filter_default.json

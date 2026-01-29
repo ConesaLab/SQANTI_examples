@@ -1,0 +1,13 @@
+INFO:
+	/home/pabloati/miniforge3/envs/sqanti3/bin/STAR-avx2 --runThreadN 4 --genomeDir example/sqanti3_qc_isoforms/STAR_index/ --readFilesIn data/short_reads/UHR_Rep2_chr22.R1.fastq.gz data/short_reads/UHR_Rep2_chr22.R2.fastq.gz --outFileNamePrefix example/sqanti3_qc_isoforms/STAR_mapping/UHR_Rep2_chr22 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --outFilterType BySJout --outSAMunmapped Within --outFilterMultimapNmax 20 --outFilterMismatchNoverLmax 0.04 --outFilterMismatchNmax 999 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --sjdbScore 1 --genomeLoad NoSharedMemory --outSAMtype BAM SortedByCoordinate --twopassMode Basic --readFilesCommand zcat
+	STAR version: 2.7.11b   compiled: 2024-11-25T09:14:51+0000 :/opt/conda/conda-bld/star_1732525954305/work/source
+Jan 29 13:57:37 ..... started STAR run
+Jan 29 13:57:37 ..... loading genome
+Jan 29 13:57:38 ..... started 1st pass mapping
+Jan 29 13:58:10 ..... finished 1st pass mapping
+Jan 29 13:58:10 ..... inserting junctions into the genome indices
+Jan 29 13:58:22 ..... started mapping
+Jan 29 13:58:55 ..... finished mapping
+Jan 29 13:58:55 ..... started sorting BAM
+Jan 29 13:58:56 ..... finished successfully
+

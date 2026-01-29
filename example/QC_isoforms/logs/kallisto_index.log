@@ -1,0 +1,10 @@
+INFO:
+
+[build] loading fasta file /home/pabloati/Programs/SQANTI_examples/example/sqanti3_qc_isoforms/UHR_chr22_corrected.fasta
+[build] k-mer length: 31
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 20278 contigs and contains 2236711 k-mers 
+
+

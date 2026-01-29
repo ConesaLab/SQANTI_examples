@@ -1,0 +1,16 @@
+[WARNING:2026-01-29 15:55:21,511] Output directory example/rescue_rules already exists. Overwriting!
+[INFO:2026-01-29 15:55:21,590] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/rescue_rules/UHR_chr22_rescue_params.txt...
+[INFO:2026-01-29 15:55:21,591] Running SQANTI3 rescue pipeline version 6.0.0
+[INFO:2026-01-29 15:55:21,591] -----------------------------------------------------
+[INFO:2026-01-29 15:55:21,591]   Initializing SQANTI3 rescue pipeline in full mode  
+[INFO:2026-01-29 15:55:21,591] -----------------------------------------------------
+[INFO:2026-01-29 15:55:21,591] --------------------------------------------------
+[INFO:2026-01-29 15:55:21,591]         Reading filter classification file        
+[INFO:2026-01-29 15:55:21,591] --------------------------------------------------
+[INFO:2026-01-29 15:55:21,619] --------------------------------------------------
+[INFO:2026-01-29 15:55:21,619]            Performing automatic rescue            
+[INFO:2026-01-29 15:55:21,619] --------------------------------------------------
+[INFO:2026-01-29 15:55:21,696] --------------------------------------------------
+[INFO:2026-01-29 15:55:21,696]             Automatic rescue completed            
+[INFO:2026-01-29 15:55:21,697] --------------------------------------------------
+[INFO:2026-01-29 15:55:21,697] Creating reference transcriptome FASTA from provided GTF (--refGTF).

@@ -1,0 +1,83 @@
+main:
+  refGTF: 'data/reference/gencode.v38.basic_chr22.gtf'
+  refFasta: 'data/reference/GRCh38.p13_chr22.fasta'
+  cpus: 4
+  dir: example/filter_ml
+  output: UHR_chr22
+  log_level: INFO
+qc:
+  enabled: false
+  options:
+    isoforms: 'data/UHR_chr22.gtf'
+    min_ref_len: 0
+    fasta: false
+    genename: false
+    novel_gene_prefix: ''
+    sites: ATAC,GCAG,GTAG
+    window: 20
+    aligner_choice: minimap2
+    gmap_index: ''
+    include_ORF: false
+    orf_input: ''
+    psauron_threshold: 0.5
+    short_reads: 'data/UHR_chr22_short_reads.fofn'
+    SR_bam: ''
+    CAGE_peak: 'data/ref_TSS_annotation/human.refTSS_v3.1.hg38.bed'
+    polyA_motif_list: 'data/polyA_motifs/mouse_and_human.polyA_motif.txt'
+    polyA_peak: ''
+    phyloP_bed: ''
+    expression: ''
+    coverage: ''
+    fl_count: 'data/UHR_abundance.tsv'
+    isoAnnotLite: false
+    gff3: ''
+    saturation: false
+    report: both
+    isoform_hits: false
+    ratio_TSS_metric: max
+    chunks: 1
+    is_fusion: false
+    tusco: ''
+filter:
+  enabled: true
+  options:
+    common:
+      sqanti_class: example/QC_isoforms/UHR_chr22_classification.txt
+      isoAnnotGFF3: ''
+      filter_isoforms: example/QC_isoforms/UHR_chr22_corrected.fasta
+      filter_gtf: example/QC_isoforms/UHR_chr22_corrected.gtf
+      filter_sam: ''
+      filter_faa: 'example/QC_isoforms/UHR_chr22_corrected.faa'
+      skip_report: false
+      filter_mono_exonic: false
+    rules:
+      enabled: false
+      options:
+        json_filter: /home/pabloati/Programs/sqanti3/src/utilities/filter/filter_default.json
+    ml:
+      enabled: true
+      options:
+        percent_training: 0.8
+        TP: ''
+        TN: ''
+        threshold: 0.7
+        force_fsm_in: false
+        intermediate_files: false
+        remove_columns: ''
+        max_class_size: 3000
+        intrapriming: 60
+rescue:
+  enabled: false
+  options:
+    filter_class: example/QC_isoforms/UHR_chr22_RulesFilter_classification.txt
+    corrected_isoforms_fasta: example/QC_isoforms/UHR_chr22_corrected.fasta
+    filtered_isoforms_gtf: example/QC_isoforms/UHR_chr22.filtered.gtf
+    refClassif: ''
+    counts: ''
+    rescue_mono_exonic: all
+    mode: automatic
+    requant: false
+    strategy: rules
+    json_filter: /home/pabloati/Programs/sqanti3/src/utilities/filter/filter_default.json
+    random_forest: example/QC_isoforms/UHR_chr22_randomforest.RData
+    threshold: 0.7
