@@ -1,12 +1,12 @@
 INFO:
-[M::mm_idx_gen::0.160*1.00] collected minimizers
-[M::mm_idx_gen::0.179*1.20] sorted minimizers
-[M::main::0.179*1.20] loaded/built the index for 2681 target sequence(s)
-[M::mm_mapopt_update::0.183*1.20] mid_occ = 50
+[M::mm_idx_gen::0.144*1.00] collected minimizers
+[M::mm_idx_gen::0.162*1.22] sorted minimizers
+[M::main::0.163*1.22] loaded/built the index for 2681 target sequence(s)
+[M::mm_mapopt_update::0.166*1.21] mid_occ = 50
 [M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 2681
-[M::mm_idx_stat::0.185*1.20] distinct minimizers: 136559 (29.74% are singletons); average occurrences: 4.647; average spacing: 10.130; total length: 6428486
-[M::worker_pipeline::2.104*2.82] mapped 1495 sequences
+[M::mm_idx_stat::0.169*1.21] distinct minimizers: 136559 (29.74% are singletons); average occurrences: 4.647; average spacing: 10.130; total length: 6428486
+[M::worker_pipeline::2.049*2.83] mapped 1495 sequences
 [M::main] Version: 2.28-r1209
 [M::main] CMD: minimap2 --secondary=yes -ax map-hifi example/rescue_ml/UHR_chr22_rescue_targets.fasta example/rescue_ml/UHR_chr22_rescue_candidates.fasta
-[M::main] Real time: 2.110 sec; CPU: 5.933 sec; Peak RSS: 0.127 GB
+[M::main] Real time: 2.055 sec; CPU: 5.804 sec; Peak RSS: 0.128 GB
 
