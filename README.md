@@ -21,19 +21,19 @@ SQANTI_examples/
 │   └── short_reads/               # Short read data
 │
 └── example/                        # Example workflows and results
-    ├── run_all_examples.sh        # Master script to run all examples
-    ├── run_SQANTI3_QC.sh          # Quality control example
-    ├── run_SQANTI3_MLfilter.sh    # Machine learning filter example
+    ├── run_all_examples.sh         # Master script to run all examples
+    ├── run_SQANTI3_QC.sh           # Quality control example
+    ├── run_SQANTI3_MLfilter.sh     # Machine learning filter example
     ├── run_SQANTI3_rules_filter.sh # Rules-based filter example
     │
-    ├── config_files/              # Configuration files for each workflow
-    │   ├── qc_config.yaml         # QC configuration
-    │   ├── qc_config_reference.yaml
-    │   ├── filter_ml.yaml         # ML filter configuration
-    │   ├── filter_rules.yaml      # Rules filter configuration
-    │   ├── rescue_ml.yaml         # ML rescue configuration
-    │   ├── rescue_rules.yaml      # Rules rescue configuration
-    │   └── rescue_automatic.yaml  # Automatic rescue configuration
+    ├── config_files/                # Configuration files for each workflow
+    │   ├── qc_config.yaml           # QC configuration
+    │   ├── qc_config_reference.yaml # QC of the reference with same orthogonal data as the isoforms
+    │   ├── filter_ml.yaml           # ML filter configuration
+    │   ├── filter_rules.yaml        # Rules filter configuration
+    │   ├── rescue_ml.yaml           # ML rescue configuration
+    │   ├── rescue_rules.yaml        # Rules rescue configuration
+    │   └── rescue_automatic.yaml    # Automatic rescue configuration
     │
     ├── QC_isoforms/               # QC results for isoforms
     ├── QC_reference/              # QC results using reference mode
