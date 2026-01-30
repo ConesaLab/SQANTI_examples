@@ -1,0 +1,27 @@
+[WARNING:2026-01-30 10:39:31,880] Output directory example/sqanti_reads_test/result_SQreads/sqR1 already exists. Overwriting!
+[INFO:2026-01-30 10:39:31,881] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/sqanti_reads_test/result_SQreads/sqR1/SQ_R1.qc_params.txt
+[INFO:2026-01-30 10:39:31,881] Initialising QC pipeline.
+[INFO:2026-01-30 10:39:31,881] Parsing provided files
+[INFO:2026-01-30 10:39:31,881] Reading genome fasta data/reference/GRCh38.p13_chr22.fasta
+[INFO:2026-01-30 10:39:32,067] **** Correcting sequences
+[INFO:2026-01-30 10:39:32,067] Correcting fasta
+[INFO:2026-01-30 10:39:32,067] Skipping aligning of sequences because GTF file was provided.
+[INFO:2026-01-30 10:39:32,078] Indels will be not calculated since you ran SQANTI3 without alignment step (SQANTI3 with gtf format as transcriptome input).
+[INFO:2026-01-30 10:39:32,197] **** Predicting ORF sequences...
+[WARNING:2026-01-30 10:39:32,197] Skipping ORF prediction because user requested it. All isoforms will be non-coding!
+[WARNING:2026-01-30 10:39:32,197] All input isoforms were predicted as non-coding
+[INFO:2026-01-30 10:39:32,197] **** Parsing Reference Transcriptome....
+[INFO:2026-01-30 10:39:32,562] **** Parsing Isoforms.
+[INFO:2026-01-30 10:39:32,584] No short-reads or coverage provided. Skipping short-read coverage calculation.
+[INFO:2026-01-30 10:39:32,584] TSS ratio will not be calculated since SR information was not provided
+[INFO:2026-01-30 10:39:32,584] **** Performing Classification of Isoforms
+[INFO:2026-01-30 10:39:35,131] Number of classified isoforms: 1269
+[INFO:2026-01-30 10:39:35,133] After classify fsm: 1269
+[INFO:2026-01-30 10:39:35,133] Full-length read abundance files not provided.
+[INFO:2026-01-30 10:39:35,133] RT-switching computation
+[INFO:2026-01-30 10:39:35,209] After RTS classification: 1269
+[INFO:2026-01-30 10:39:35,209] Isoforms expression files not provided.
+[INFO:2026-01-30 10:39:35,245] Writing output files
+[INFO:2026-01-30 10:39:35,345] **** Generating SQANTI3 report.
+[INFO:2026-01-30 10:39:47,976] Removing temporary files.
+[INFO:2026-01-30 10:39:47,976] SQANTI3 complete in 16.1 sec.

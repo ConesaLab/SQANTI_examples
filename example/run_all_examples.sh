@@ -1,8 +1,8 @@
 #!/bin/bash
-# This script has to be run from the main directory of SQANTI3
+# This script has to be run from the main directory of SQANTI_example
 
 # Run SQANTI QC
-sqanti3 qc -c example/config_files/qc_config.yaml
+sqanti3 qc -c example/config_files/qc_config.yaml 
 # sqanti3 qc -c example/config_files/qc_config_reference.yaml
 
 # # Run SQANTI filter

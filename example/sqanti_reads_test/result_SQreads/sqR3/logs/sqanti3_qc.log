@@ -1,0 +1,26 @@
+[INFO:2026-01-30 10:40:04,136] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/sqanti_reads_test/result_SQreads/sqR3/SQ_R3.qc_params.txt
+[INFO:2026-01-30 10:40:04,137] Initialising QC pipeline.
+[INFO:2026-01-30 10:40:04,137] Parsing provided files
+[INFO:2026-01-30 10:40:04,137] Reading genome fasta data/reference/GRCh38.p13_chr22.fasta
+[INFO:2026-01-30 10:40:04,319] **** Correcting sequences
+[INFO:2026-01-30 10:40:04,320] Correcting fasta
+[INFO:2026-01-30 10:40:04,320] Skipping aligning of sequences because GTF file was provided.
+[INFO:2026-01-30 10:40:04,334] Indels will be not calculated since you ran SQANTI3 without alignment step (SQANTI3 with gtf format as transcriptome input).
+[INFO:2026-01-30 10:40:04,467] **** Predicting ORF sequences...
+[WARNING:2026-01-30 10:40:04,467] Skipping ORF prediction because user requested it. All isoforms will be non-coding!
+[WARNING:2026-01-30 10:40:04,467] All input isoforms were predicted as non-coding
+[INFO:2026-01-30 10:40:04,467] **** Parsing Reference Transcriptome....
+[INFO:2026-01-30 10:40:04,826] **** Parsing Isoforms.
+[INFO:2026-01-30 10:40:04,846] No short-reads or coverage provided. Skipping short-read coverage calculation.
+[INFO:2026-01-30 10:40:04,846] TSS ratio will not be calculated since SR information was not provided
+[INFO:2026-01-30 10:40:04,846] **** Performing Classification of Isoforms
+[INFO:2026-01-30 10:40:08,026] Number of classified isoforms: 1476
+[INFO:2026-01-30 10:40:08,028] After classify fsm: 1476
+[INFO:2026-01-30 10:40:08,028] Full-length read abundance files not provided.
+[INFO:2026-01-30 10:40:08,028] RT-switching computation
+[INFO:2026-01-30 10:40:08,117] After RTS classification: 1476
+[INFO:2026-01-30 10:40:08,117] Isoforms expression files not provided.
+[INFO:2026-01-30 10:40:08,161] Writing output files
+[INFO:2026-01-30 10:40:08,309] **** Generating SQANTI3 report.
+[INFO:2026-01-30 10:40:21,106] Removing temporary files.
+[INFO:2026-01-30 10:40:21,107] SQANTI3 complete in 16.97 sec.
