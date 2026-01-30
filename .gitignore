@@ -1,6 +1,6 @@
 
 # SQANTI example big output files
-example/QC_output/STAR_index/SA
-example/QC_output/STAR_index/SAindex
+example/QC_isoforms/STAR_index/SA
+example/QC_isoforms/STAR_index/SAindex
 example/QC_reference/STAR_index/SA
 example/QC_reference/STAR_index/SAindex
