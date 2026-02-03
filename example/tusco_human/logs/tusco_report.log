@@ -1,0 +1,921 @@
+INFO:
+# A tibble: 1 × 2
+  id_type     n
+  <chr>   <int>
+1 ensembl    43
+# A tibble: 7 × 2
+  Metric                  Value 
+  <chr>                   <chr> 
+1 Sensitivity             80.43%
+2 Non-redundant Precision 86.05%
+3 Redundant Precision     93.02%
+4 Positive Detection Rate 86.96%
+5 False Discovery Rate    13.95%
+6 False Detection Rate    0%    
+7 Redundancy              107.5%
+
+  |                                                        
+  |                                                  |   0%
+  |                                                        
+  |=                                                 |   2%
+  |                                                        
+  |==                                                |   4%
+  |                                                        
+  |===                                               |   7%
+  |                                                        
+  |====                                              |   9%
+  |                                                        
+  |=====                                             |  11%
+  |                                                        
+  |=======                                           |  13%
+  |                                                        
+  |========                                          |  15%
+  |                                                        
+  |=========                                         |  17%
+  |                                                        
+  |==========                                        |  20%
+  |                                                        
+  |===========                                       |  22%
+  |                                                        
+  |============                                      |  24%
+  |                                                        
+  |=============                                     |  26%
+  |                                                        
+  |==============                                    |  28%
+  |                                                        
+  |===============                                   |  30%
+  |                                                        
+  |================                                  |  33%
+  |                                                        
+  |=================                                 |  35%
+  |                                                        
+  |==================                                |  37%
+  |                                                        
+  |====================                              |  39%
+  |                                                        
+  |=====================                             |  41%
+  |                                                        
+  |======================                            |  43%
+  |                                                        
+  |=======================                           |  46%
+  |                                                        
+  |========================                          |  48%
+  |                                                        
+  |=========================                         |  50%
+  |                                                        
+  |==========================                        |  52%
+  |                                                        
+  |===========================                       |  54%
+  |                                                        
+  |============================                      |  57%
+  |                                                        
+  |=============================                     |  59%
+  |                                                        
+  |==============================                    |  61%
+  |                                                        
+  |================================                  |  63%
+  |                                                        
+  |=================================                 |  65%
+  |                                                        
+  |==================================                |  67%
+  |                                                        
+  |===================================               |  70%
+  |                                                        
+  |====================================              |  72%
+  |                                                        
+  |=====================================             |  74%
+  |                                                        
+  |======================================            |  76%
+  |                                                        
+  |=======================================           |  78%
+  |                                                        
+  |========================================          |  80%
+  |                                                        
+  |=========================================         |  83%
+  |                                                        
+  |==========================================        |  85%
+  |                                                        
+  |===========================================       |  87%
+1/19                  
+2/19 [unnamed-chunk-1]
+3/19                  
+4/19 [unnamed-chunk-2]
+5/19                  
+6/19 [unnamed-chunk-3]
+7/19                  
+8/19 [unnamed-chunk-4]
+9/19                  
+10/19 [unnamed-chunk-5]
+11/19                  
+12/19 [unnamed-chunk-6]
+13/19                  
+14/19 [unnamed-chunk-7]
+15/19                  
+16/19 [unnamed-chunk-8]
+17/19                  
+18/19 [unnamed-chunk-9]
+19/19                  
+/home/pabloati/miniforge3/envs/sqanti3_new/bin/pandoc +RTS -K512m -RTS /home/pabloati/Programs/SQANTI_examples/example/tusco_human/SQANTI3_TUSCO_Report.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /home/pabloati/Programs/SQANTI_examples/example/tusco_human/isoforms_TUSCO_report.html --lua-filter /home/pabloati/miniforge3/envs/sqanti3_new/lib/R/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/pabloati/miniforge3/envs/sqanti3_new/lib/R/library/rmarkdown/rmarkdown/lua/latex-div.lua --lua-filter /home/pabloati/miniforge3/envs/sqanti3_new/lib/R/library/rmarkdown/rmarkdown/lua/table-classes.lua --embed-resources --standalone --variable bs3=TRUE --section-divs --table-of-contents --toc-depth 3 --variable toc_float=1 --variable toc_selectors=h1,h2,h3 --variable toc_collapsed=1 --variable toc_smooth_scroll=1 --variable toc_print=1 --template /home/pabloati/miniforge3/envs/sqanti3_new/lib/R/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --id-prefix section- --variable theme=bootstrap --css tusco_style.css --mathjax --variable 'mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpdX8FIt/rmarkdown-str7b7286ee40795.html 
+
+INFO:
+Loading necessary libraries...
+Rows: 43 Columns: 48
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (11): isoform, chrom, strand, structural_category, associated_gene, asso...
+dbl  (9): length, exons, ref_length, ref_exons, diff_to_TSS, diff_to_TTS, di...
+lgl (28): RTS_stage, min_sample_cov, min_cov, min_cov_pos, sd_cov, FL, n_ind...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Successfully read file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/isoforms_classification.txt
+Reading TUSCO TSV file...
+Successfully read TUSCO TSV file with 46 rows
+Reading transcript GTF file...
+transcript_gtf_df columns: seqnames, start, end, width, strand, source, type, score, phase, transcript_id, gene_id
+Reading reference GTF file...
+reference_gtf_df columns: seqnames, start, end, width, strand, source, type, score, phase, gene_id, gene_type, gene_name, level, hgnc_id, havana_gene, transcript_id, transcript_type, transcript_name, protein_id, tag, ccdsid, exon_number, exon_id, transcript_support_level, havana_transcript, ont
+tusco_df columns: ensembl, transcript, gene_name, gene_id_num, refseq, prot_refseq
+Defining regex patterns for ID classification...
+Cleaning the classification data...
+Cleaning the classification data...
+Summary of id_type counts:
+The id_type with the highest count is: ensembl with 43 entries.
+Creating tusco_gtf_df from reference GTF using ensembl identifiers...
+Created tusco_gtf_df with 167 entries from reference GTF
+Defining TUSCO-related transcript mappings...
+Calculating evaluation metrics...
+Calculating redundant Precision...
+Precision calculated successfully.
+Calculating Sensitivity...
+Evaluation Metrics:
+Preparing data for plotting...
+TUSCO results written to: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/isoforms_TUSCO_results.tsv
+IGV genes to plot: 46
+Warning message:
+The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead. 
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+Generating IGV plots for each gene...
+Mapped transcript_id to classification isoform: 112/112 matched
+IGV plotting preview (up to 15 genes): ENSG00000118804, ENSG00000120738, ENSG00000124216, ENSG00000146066, ENSG00000247626, ENSG00000162817, ENSG00000170604, ENSG00000168792, ENSG00000170027, ENSG00000173456, ENSG00000175602, ENSG00000280789, ENSG00000176020, ENSG00000186222, ENSG00000185085
+plots_dir: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots
+capabilities(cairo)=TRUE, getOption(bitmapType)=cairo
+Gene ENSG00000118804: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr4:76256733-76361130
+Creating plot for gene: ENSG00000118804
+Starting plot generation for gene: ENSG00000118804
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr4:76256733-76361130, start=50001, end=54398, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr4:76256733-76361130
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000118804.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=98642).
+Gene ENSG00000120738: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr5:138415479-138519303
+Creating plot for gene: ENSG00000120738
+Starting plot generation for gene: ENSG00000120738
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr5:138415479-138519303, start=50001, end=53825, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr5:138415479-138519303
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000120738.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=102828).
+Gene ENSG00000124216: tusco_exons=0, sample_exons=3, reference_exons=3
+Sample seqnames: chr20:49932980-50038886
+Creating plot for gene: ENSG00000124216
+Starting plot generation for gene: ENSG00000124216
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr20:49932980-50038886, start=50001, end=55907, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr20:49932980-50038886
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000124216.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=101789).
+Gene ENSG00000146066: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr5:176338751-176439761
+Creating plot for gene: ENSG00000146066
+Starting plot generation for gene: ENSG00000146066
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr5:176338751-176439761, start=50001, end=51011, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr5:176338751-176439761
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000146066.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=115944).
+Gene ENSG00000247626: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr2:197655369-197758395
+Creating plot for gene: ENSG00000247626
+Starting plot generation for gene: ENSG00000247626
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr2:197655369-197758395, start=50001, end=53027, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr2:197655369-197758395
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000247626.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=100140).
+Gene ENSG00000162817: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr1:220640363-220749153
+Creating plot for gene: ENSG00000162817
+Starting plot generation for gene: ENSG00000162817
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr1:220640363-220749153, start=50001, end=58791, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr1:220640363-220749153
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000162817.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=106772).
+Gene ENSG00000170604: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr19:45833608-45936141
+Creating plot for gene: ENSG00000170604
+Starting plot generation for gene: ENSG00000170604
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr19:45833608-45936141, start=50001, end=52534, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr19:45833608-45936141
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000170604.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=100912).
+Gene ENSG00000168792: tusco_exons=0, sample_exons=4, reference_exons=2
+Sample seqnames: chr17:29510547-29617037
+Creating plot for gene: ENSG00000168792
+Starting plot generation for gene: ENSG00000168792
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr17:29510547-29617037, start=50001, end=56491, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr17:29510547-29617037
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 2
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000168792.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=125658).
+Gene ENSG00000170027: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr7:76276799-76408991
+Creating plot for gene: ENSG00000170027
+Starting plot generation for gene: ENSG00000170027
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr7:76276799-76408991, start=50001, end=82193, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr7:76276799-76408991
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000170027.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=98168).
+Gene ENSG00000173456: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr11:119284527-119387309
+Creating plot for gene: ENSG00000173456
+Starting plot generation for gene: ENSG00000173456
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr11:119284527-119387309, start=50001, end=52783, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr11:119284527-119387309
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000173456.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=102380).
+Gene ENSG00000175602: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr11:65840673-65941635
+Creating plot for gene: ENSG00000175602
+Starting plot generation for gene: ENSG00000175602
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr11:65840673-65941635, start=50001, end=50963, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr11:65840673-65941635
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000175602.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=113207).
+Gene ENSG00000280789: tusco_exons=0, sample_exons=3, reference_exons=3
+Sample seqnames: chr16:29766152-29872489
+Creating plot for gene: ENSG00000280789
+Starting plot generation for gene: ENSG00000280789
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr16:29766152-29872489, start=50001, end=56338, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr16:29766152-29872489
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000280789.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=110552).
+Gene ENSG00000176020: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr3:49666829-49769684
+Creating plot for gene: ENSG00000176020
+Starting plot generation for gene: ENSG00000176020
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr3:49666829-49769684, start=50001, end=52856, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr3:49666829-49769684
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000176020.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=99585).
+Gene ENSG00000186222: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr4:6666174-6767664
+Creating plot for gene: ENSG00000186222
+Starting plot generation for gene: ENSG00000186222
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr4:6666174-6767664, start=50001, end=51491, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr4:6666174-6767664
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000186222.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=114676).
+Gene ENSG00000185085: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr11:62596848-62703302
+Creating plot for gene: ENSG00000185085
+Starting plot generation for gene: ENSG00000185085
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr11:62596848-62703302, start=50001, end=56455, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr11:62596848-62703302
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000185085.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=104782).
+Gene ENSG00000182810: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr16:67970916-68073232
+Creating plot for gene: ENSG00000182810
+Starting plot generation for gene: ENSG00000182810
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr16:67970916-68073232, start=50001, end=52317, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr16:67970916-68073232
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000182810.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=100176).
+Gene ENSG00000188636: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr22:44442583-44548233
+Creating plot for gene: ENSG00000188636
+Starting plot generation for gene: ENSG00000188636
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr22:44442583-44548233, start=50001, end=55651, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr22:44442583-44548233
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000188636.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=101314).
+Gene ENSG00000198142: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr2:109564364-109668990
+Creating plot for gene: ENSG00000198142
+Starting plot generation for gene: ENSG00000198142
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr2:109564364-109668990, start=50001, end=54627, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr2:109564364-109668990
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000198142.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=101059).
+Gene ENSG00000170385: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr1:211521568-211629161
+Creating plot for gene: ENSG00000170385
+Starting plot generation for gene: ENSG00000170385
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr1:211521568-211629161, start=50001, end=57594, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr1:211521568-211629161
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000170385.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=108798).
+Gene ENSG00000169976: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr6:144044884-144145573
+Creating plot for gene: ENSG00000169976
+Starting plot generation for gene: ENSG00000169976
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr6:144044884-144145573, start=50001, end=50690, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr6:144044884-144145573
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000169976.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=110064).
+Gene ENSG00000182154: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr9:137501879-137602555
+Creating plot for gene: ENSG00000182154
+Starting plot generation for gene: ENSG00000182154
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr9:137501879-137602555, start=50001, end=50677, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr9:137501879-137602555
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000182154.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=108502).
+Gene ENSG00000136897: tusco_exons=0, sample_exons=4, reference_exons=2
+Sample seqnames: chr9:101337633-101448618
+Creating plot for gene: ENSG00000136897
+Starting plot generation for gene: ENSG00000136897
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr9:101337633-101448618, start=50001, end=60986, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr9:101337633-101448618
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 2
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000136897.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=134181).
+Gene ENSG00000204439: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr6:31608298-31710778
+Creating plot for gene: ENSG00000204439
+Starting plot generation for gene: ENSG00000204439
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr6:31608298-31710778, start=50001, end=52481, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr6:31608298-31710778
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000204439.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=100635).
+Gene ENSG00000196368: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chrX:51440011-51546592
+Creating plot for gene: ENSG00000196368
+Starting plot generation for gene: ENSG00000196368
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chrX:51440011-51546592, start=50001, end=56582, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chrX:51440011-51546592
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000196368.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=110259).
+Gene ENSG00000135045: tusco_exons=0, sample_exons=4, reference_exons=2
+Sample seqnames: chr9:74896583-75002912
+Creating plot for gene: ENSG00000135045
+Starting plot generation for gene: ENSG00000135045
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr9:74896583-75002912, start=50001, end=56330, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr9:74896583-75002912
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 2
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000135045.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=122896).
+Gene ENSG00000205138: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr19:35945188-36046312
+Creating plot for gene: ENSG00000205138
+Starting plot generation for gene: ENSG00000205138
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr19:35945188-36046312, start=50001, end=51125, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr19:35945188-36046312
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000205138.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=115074).
+Gene ENSG00000176022: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr1:1182237-1285041
+Creating plot for gene: ENSG00000176022
+Starting plot generation for gene: ENSG00000176022
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr1:1182237-1285041, start=50001, end=52805, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr1:1182237-1285041
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000176022.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=101411).
+Gene ENSG00000165572: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr13:41077569-41182802
+Creating plot for gene: ENSG00000165572
+Starting plot generation for gene: ENSG00000165572
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr13:41077569-41182802, start=50001, end=55234, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr13:41077569-41182802
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000165572.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=102108).
+Gene ENSG00000176396: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr19:39488707-39590161
+Creating plot for gene: ENSG00000176396
+Starting plot generation for gene: ENSG00000176396
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr19:39488707-39590161, start=50001, end=51455, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr19:39488707-39590161
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000176396.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=116849).
+Gene ENSG00000221821: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr6:42840265-42940821
+Creating plot for gene: ENSG00000221821
+Starting plot generation for gene: ENSG00000221821
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr6:42840265-42940821, start=50001, end=50557, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr6:42840265-42940821
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000221821.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=103651).
+Gene ENSG00000223496: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr16:70196778-70301940
+Creating plot for gene: ENSG00000223496
+Starting plot generation for gene: ENSG00000223496
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr16:70196778-70301940, start=50001, end=55163, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr16:70196778-70301940
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000223496.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=103628).
+Gene ENSG00000179918: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr16:30393631-30495874
+Creating plot for gene: ENSG00000179918
+Starting plot generation for gene: ENSG00000179918
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr16:30393631-30495874, start=50001, end=52244, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr16:30393631-30495874
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000179918.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=99083).
+Gene ENSG00000179886: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr8:143547831-143653224
+Creating plot for gene: ENSG00000179886
+Starting plot generation for gene: ENSG00000179886
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr8:143547831-143653224, start=50001, end=55394, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr8:143547831-143653224
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000179886.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=104812).
+Gene ENSG00000255423: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr3:73011659-73113337
+Creating plot for gene: ENSG00000255423
+Starting plot generation for gene: ENSG00000255423
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr3:73011659-73113337, start=50001, end=51679, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr3:73011659-73113337
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000255423.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=99123).
+Gene ENSG00000262664: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr17:1992022-2093425
+Creating plot for gene: ENSG00000262664
+Starting plot generation for gene: ENSG00000262664
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr17:1992022-2093425, start=50001, end=51404, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr17:1992022-2093425
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000262664.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=118777).
+Gene ENSG00000270170: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr3:196892674-196993543
+Creating plot for gene: ENSG00000270170
+Starting plot generation for gene: ENSG00000270170
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr3:196892674-196993543, start=50001, end=50870, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr3:196892674-196993543
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000270170.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=103192).
+Gene ENSG00000182636: tusco_exons=0, sample_exons=1, reference_exons=1
+Sample seqnames: chr15:23635400-23737305
+Creating plot for gene: ENSG00000182636
+Starting plot generation for gene: ENSG00000182636
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr15:23635400-23737305, start=50001, end=51906, strand=-
+Skipping IdeogramTrack for non-standard chromosome: chr15:23635400-23737305
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000182636.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=102872).
+Gene ENSG00000127920: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr7:93871735-93978610
+Creating plot for gene: ENSG00000127920
+Starting plot generation for gene: ENSG00000127920
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr7:93871735-93978610, start=50001, end=56876, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr7:93871735-93978610
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000127920.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=105060).
+Gene ENSG00000155858: tusco_exons=0, sample_exons=4, reference_exons=4
+Sample seqnames: chr5:157693712-157810709
+Creating plot for gene: ENSG00000155858
+Starting plot generation for gene: ENSG00000155858
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr5:157693712-157810709, start=50001, end=66998, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr5:157693712-157810709
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000155858.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=101517).
+Gene ENSG00000176422: tusco_exons=0, sample_exons=2, reference_exons=2
+Sample seqnames: chr12:56418578-56529708
+Creating plot for gene: ENSG00000176422
+Starting plot generation for gene: ENSG00000176422
+Creating GRangesList for sample transcripts...
+Defining the plotting range...
+gene_range: chr=chr12:56418578-56529708, start=50001, end=61131, strand=+
+Skipping IdeogramTrack for non-standard chromosome: chr12:56418578-56529708
+Genome axis created.
+Creating GeneRegionTrack for sample transcripts...
+Sample transcripts to track: 1
+Creating GeneRegionTrack for reference annotation...
+Reference transcripts to track: 1
+All tracks combined for plotting.
+Saving plot to file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/igv_plots/ENSG00000176422.png
+Opening PNG device (cairo=TRUE, bitmapType=cairo)
+Plot device closed.
+Plot saved successfully (bytes=112721).
+Gene ENSG00000182700: tusco_exons=0, sample_exons=0, reference_exons=1
+Creating plot for gene: ENSG00000182700
+Starting plot generation for gene: ENSG00000182700
+No transcript or reference features found for ENSG00000182700; skipping plot.
+Gene ENSG00000204366: tusco_exons=0, sample_exons=0, reference_exons=2
+Creating plot for gene: ENSG00000204366
+Starting plot generation for gene: ENSG00000204366
+No transcript or reference features found for ENSG00000204366; skipping plot.
+Gene ENSG00000213402: tusco_exons=0, sample_exons=0, reference_exons=2
+Creating plot for gene: ENSG00000213402
+Starting plot generation for gene: ENSG00000213402
+No transcript or reference features found for ENSG00000213402; skipping plot.
+Gene ENSG00000105617: tusco_exons=0, sample_exons=0, reference_exons=4
+Creating plot for gene: ENSG00000105617
+Starting plot generation for gene: ENSG00000105617
+No transcript or reference features found for ENSG00000105617; skipping plot.
+Gene ENSG00000183779: tusco_exons=0, sample_exons=0, reference_exons=2
+Creating plot for gene: ENSG00000183779
+Starting plot generation for gene: ENSG00000183779
+No transcript or reference features found for ENSG00000183779; skipping plot.
+Gene ENSG00000183598: tusco_exons=0, sample_exons=0, reference_exons=1
+Creating plot for gene: ENSG00000183598
+Starting plot generation for gene: ENSG00000183598
+No transcript or reference features found for ENSG00000183598; skipping plot.
+Total IGV plots created: 40
+Rendering the HTML report...
+[WARNING] Div at file7b7286860997e.md line 454 column 6 unclosed at file7b7286860997e.md line 494 column 1, closing implicitly.
+[WARNING] Div at file7b7286860997e.md line 317 column 6 unclosed at file7b7286860997e.md line 494 column 1, closing implicitly.
+
+
+processing file: SQANTI3_TUSCO_Report.Rmd
+output file: /home/pabloati/Programs/SQANTI_examples/example/tusco_human/SQANTI3_TUSCO_Report.knit.md
+
+
+Output created: example/tusco_human/isoforms_TUSCO_report.html
+
