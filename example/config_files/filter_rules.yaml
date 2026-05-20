@@ -53,7 +53,7 @@ filter:
     rules:
       enabled: true
       options:
-        json_filter: /home/pabloati/Programs/sqanti3/src/utilities/filter/filter_default.json
+        json_filter: data/filter_default.json
     ml:
       enabled: false
       options:

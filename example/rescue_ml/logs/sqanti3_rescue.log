@@ -1,54 +1,44 @@
-[INFO:2026-01-30 08:57:11,838] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/rescue_ml/UHR_chr22_rescue_params.txt...
-[INFO:2026-01-30 08:57:11,838] Running SQANTI3 rescue pipeline version 6.0.0
-[INFO:2026-01-30 08:57:11,838] -----------------------------------------------------
-[INFO:2026-01-30 08:57:11,839]   Initializing SQANTI3 rescue pipeline in full mode  
-[INFO:2026-01-30 08:57:11,839] -----------------------------------------------------
-[INFO:2026-01-30 08:57:11,839] --------------------------------------------------
-[INFO:2026-01-30 08:57:11,839]         Reading filter classification file        
-[INFO:2026-01-30 08:57:11,839] --------------------------------------------------
-[INFO:2026-01-30 08:57:11,866] --------------------------------------------------
-[INFO:2026-01-30 08:57:11,866]            Performing automatic rescue            
-[INFO:2026-01-30 08:57:11,866] --------------------------------------------------
-[INFO:2026-01-30 08:57:11,961] --------------------------------------------------
-[INFO:2026-01-30 08:57:11,961]             Automatic rescue completed            
-[INFO:2026-01-30 08:57:11,961] --------------------------------------------------
-[INFO:2026-01-30 08:57:11,961] Creating reference transcriptome FASTA from provided GTF (--refGTF).
-[INFO:2026-01-30 08:57:12,207] Reference transcriptome FASTA was saved to example/rescue_ml/gencode.v38.basic_chr22.isoforms.fasta
-[INFO:2026-01-30 08:57:13,038] --------------------------------------------------
-[INFO:2026-01-30 08:57:13,038]     Preparation of files for artifact mapping:    
-[INFO:2026-01-30 08:57:13,038] --------------------------------------------------
-[INFO:2026-01-30 08:57:13,038] Filtering reference transcriptome FASTA to only rescue targets.
-[INFO:2026-01-30 08:57:13,127] Filtering supplied long read transcriptome FASTA (--isoforms) to only include rescue targets...
-[INFO:2026-01-30 08:57:13,294] Creating rescue candidate FASTA from supplied long read transcriptome fasta (--isoforms)...
-[INFO:2026-01-30 08:57:13,400] --------------------------------------------------
-[INFO:2026-01-30 08:57:13,400]      Artifact mapping (candidates vs targets)     
-[INFO:2026-01-30 08:57:13,400] --------------------------------------------------
-[INFO:2026-01-30 08:57:13,400] Mapping rescue candidates to rescue targets with minimap2...
-[INFO:2026-01-30 08:57:15,463] Building candidate-target table of mapping hits...
-[INFO:2026-01-30 08:57:15,515] Mapping hit table was saved to example/rescue_ml/UHR_chr22_rescue_mapping_hits.tsv
-[INFO:2026-01-30 08:57:15,517] --------------------------------------------------
-[INFO:2026-01-30 08:57:15,517]          Rescue-by-mapping for ML filter          
-[INFO:2026-01-30 08:57:15,517] --------------------------------------------------
-[INFO:2026-01-30 08:57:15,517] --------------------------------------------------
-[INFO:2026-01-30 08:57:15,517]                ML rescue selected!                
-[INFO:2026-01-30 08:57:15,517] --------------------------------------------------
-[INFO:2026-01-30 08:57:15,517] Running pre-trained random forest on reference transcriptome classification file.
-[INFO:2026-01-30 08:57:17,953] Running rescue-by-mapping for ML filter.
-[INFO:2026-01-30 08:57:18,783] --------------------------------------------------
-[INFO:2026-01-30 08:57:18,783]              Generating rescued GTF.              
-[INFO:2026-01-30 08:57:18,783] --------------------------------------------------
-[INFO:2026-01-30 08:57:18,784] Final inclusion list written to file: example/rescue_ml/UHR_chr22_rescue_inclusion_list.tsv
-[INFO:2026-01-30 08:57:18,787] Final rescue table written to file: example/rescue_ml/UHR_chr22_rescue_table.tsv
-[INFO:2026-01-30 08:57:18,856] Final output GTF written to file:  example/rescue_ml/UHR_chr22_rescued.gtf
-[INFO:2026-01-30 08:57:18,944] Rescued FASTA written to file: example/rescue_ml/UHR_chr22_rescued.fasta
-[INFO:2026-01-30 08:57:19,013] Rescued classification written to file: example/rescue_ml/UHR_chr22_rescued_classification.txt
-[INFO:2026-01-30 08:57:19,013] --------------------------------------------------
-[INFO:2026-01-30 08:57:19,013]           Rescue finished successfully!           
-[INFO:2026-01-30 08:57:19,013] --------------------------------------------------
-[INFO:2026-01-30 08:57:19,013] --------------------------------------------------
-[INFO:2026-01-30 08:57:19,013]             Running requantification.             
-[INFO:2026-01-30 08:57:19,013] --------------------------------------------------
-[INFO:2026-01-30 08:57:19,017] Counts file parsed.
-[INFO:2026-01-30 08:57:19,053] Requantification of counts completed.
-[INFO:2026-01-30 08:57:19,053] New count table saved to example/rescue_ml/UHR_chr22_reassigned_counts.tsv
-[INFO:2026-01-30 08:57:19,113] Requantification finished!
+[WARNING:2026-05-20 15:03:38,934] Output directory example/rescue_ml already exists. Overwriting!
+[INFO:2026-05-20 15:03:39,041] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/rescue_ml/UHR_chr22_rescue_params.txt...
+[INFO:2026-05-20 15:03:39,042] Running SQANTI3 rescue pipeline version 6.0.1
+[INFO:2026-05-20 15:03:39,042] -----------------------------------------------------
+[INFO:2026-05-20 15:03:39,042]   Initializing SQANTI3 rescue pipeline in full mode  
+[INFO:2026-05-20 15:03:39,042] -----------------------------------------------------
+[INFO:2026-05-20 15:03:39,042] --------------------------------------------------
+[INFO:2026-05-20 15:03:39,042]         Reading filter classification file        
+[INFO:2026-05-20 15:03:39,042] --------------------------------------------------
+[INFO:2026-05-20 15:03:39,104] --------------------------------------------------
+[INFO:2026-05-20 15:03:39,105]            Performing automatic rescue            
+[INFO:2026-05-20 15:03:39,105] --------------------------------------------------
+[INFO:2026-05-20 15:03:39,258] --------------------------------------------------
+[INFO:2026-05-20 15:03:39,258]             Automatic rescue completed            
+[INFO:2026-05-20 15:03:39,259] --------------------------------------------------
+[INFO:2026-05-20 15:03:39,259] Creating reference transcriptome FASTA from provided GTF (--refGTF).
+[INFO:2026-05-20 15:03:39,681] Reference transcriptome FASTA was saved to example/rescue_ml/gencode.v38.basic_chr22.isoforms.fasta
+[INFO:2026-05-20 15:03:41,031] Mapping hits already exist, skipping mapping step.
+[INFO:2026-05-20 15:03:41,038] --------------------------------------------------
+[INFO:2026-05-20 15:03:41,038]          Rescue-by-mapping for ML filter          
+[INFO:2026-05-20 15:03:41,038] --------------------------------------------------
+[INFO:2026-05-20 15:03:41,038] --------------------------------------------------
+[INFO:2026-05-20 15:03:41,038]                ML rescue selected!                
+[INFO:2026-05-20 15:03:41,038] --------------------------------------------------
+[INFO:2026-05-20 15:03:41,038] Running pre-trained random forest on reference transcriptome classification file.
+[INFO:2026-05-20 15:03:45,282] Running rescue-by-mapping for ML filter.
+[INFO:2026-05-20 15:03:46,577] --------------------------------------------------
+[INFO:2026-05-20 15:03:46,577]              Generating rescued GTF.              
+[INFO:2026-05-20 15:03:46,577] --------------------------------------------------
+[INFO:2026-05-20 15:03:46,578] Final inclusion list written to file: example/rescue_ml/UHR_chr22_rescue_inclusion_list.tsv
+[INFO:2026-05-20 15:03:46,582] Final rescue table written to file: example/rescue_ml/UHR_chr22_rescue_table.tsv
+[INFO:2026-05-20 15:03:46,697] Final output GTF written to file:  example/rescue_ml/UHR_chr22_rescued.gtf
+[INFO:2026-05-20 15:03:46,886] Rescued FASTA written to file: example/rescue_ml/UHR_chr22_rescued.fasta
+[INFO:2026-05-20 15:03:46,997] Rescued classification written to file: example/rescue_ml/UHR_chr22_rescued_classification.txt
+[INFO:2026-05-20 15:03:46,998] --------------------------------------------------
+[INFO:2026-05-20 15:03:46,998]           Rescue finished successfully!           
+[INFO:2026-05-20 15:03:46,998] --------------------------------------------------
+[INFO:2026-05-20 15:03:46,998] --------------------------------------------------
+[INFO:2026-05-20 15:03:46,998]             Running requantification.             
+[INFO:2026-05-20 15:03:46,998] --------------------------------------------------
+[INFO:2026-05-20 15:03:47,012] Counts file parsed.
+[INFO:2026-05-20 15:03:47,098] Requantification of counts completed.
+[INFO:2026-05-20 15:03:47,098] New count table saved to example/rescue_ml/UHR_chr22_reassigned_counts.tsv
+[INFO:2026-05-20 15:03:47,206] Requantification finished!

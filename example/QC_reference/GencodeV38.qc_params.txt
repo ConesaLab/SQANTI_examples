@@ -1,4 +1,4 @@
-Version	6.0.0
+Version	6.0.1
 Input	/home/pabloati/Programs/SQANTI_examples/data/reference/gencode.v38.basic_chr22.gtf
 Annotation	/home/pabloati/Programs/SQANTI_examples/data/reference/gencode.v38.basic_chr22.gtf
 Genome	/home/pabloati/Programs/SQANTI_examples/data/reference/GRCh38.p13_chr22.fasta

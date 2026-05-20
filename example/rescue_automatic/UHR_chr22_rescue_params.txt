@@ -1,4 +1,4 @@
-Version	6.0.0
+Version	6.0.1
 FilterClassification	/home/pabloati/Programs/SQANTI_examples/example/filter_rules/UHR_chr22_RulesFilter_classification.txt
 ReferenceGTF	/home/pabloati/Programs/SQANTI_examples/data/reference/gencode.v38.basic_chr22.gtf
 ReferenceFasta	/home/pabloati/Programs/SQANTI_examples/data/reference/GRCh38.p13_chr22.fasta

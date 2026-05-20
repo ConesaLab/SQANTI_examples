@@ -1,54 +1,41 @@
-[INFO:2026-01-30 08:51:39,474] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/rescue_rules/UHR_chr22_rescue_params.txt...
-[INFO:2026-01-30 08:51:39,475] Running SQANTI3 rescue pipeline version 6.0.0
-[INFO:2026-01-30 08:51:39,475] -----------------------------------------------------
-[INFO:2026-01-30 08:51:39,475]   Initializing SQANTI3 rescue pipeline in full mode  
-[INFO:2026-01-30 08:51:39,475] -----------------------------------------------------
-[INFO:2026-01-30 08:51:39,475] --------------------------------------------------
-[INFO:2026-01-30 08:51:39,475]         Reading filter classification file        
-[INFO:2026-01-30 08:51:39,475] --------------------------------------------------
-[INFO:2026-01-30 08:51:39,502] --------------------------------------------------
-[INFO:2026-01-30 08:51:39,502]            Performing automatic rescue            
-[INFO:2026-01-30 08:51:39,502] --------------------------------------------------
-[INFO:2026-01-30 08:51:39,558] --------------------------------------------------
-[INFO:2026-01-30 08:51:39,558]             Automatic rescue completed            
-[INFO:2026-01-30 08:51:39,558] --------------------------------------------------
-[INFO:2026-01-30 08:51:39,558] Creating reference transcriptome FASTA from provided GTF (--refGTF).
-[INFO:2026-01-30 08:51:39,802] Reference transcriptome FASTA was saved to example/rescue_rules/gencode.v38.basic_chr22.isoforms.fasta
-[INFO:2026-01-30 08:51:40,920] --------------------------------------------------
-[INFO:2026-01-30 08:51:40,920]     Preparation of files for artifact mapping:    
-[INFO:2026-01-30 08:51:40,920] --------------------------------------------------
-[INFO:2026-01-30 08:51:40,920] Filtering reference transcriptome FASTA to only rescue targets.
-[INFO:2026-01-30 08:51:41,016] Filtering supplied long read transcriptome FASTA (--isoforms) to only include rescue targets...
-[INFO:2026-01-30 08:51:41,159] Creating rescue candidate FASTA from supplied long read transcriptome fasta (--isoforms)...
-[INFO:2026-01-30 08:51:41,270] --------------------------------------------------
-[INFO:2026-01-30 08:51:41,270]      Artifact mapping (candidates vs targets)     
-[INFO:2026-01-30 08:51:41,270] --------------------------------------------------
-[INFO:2026-01-30 08:51:41,271] Mapping rescue candidates to rescue targets with minimap2...
-[INFO:2026-01-30 08:51:42,528] Building candidate-target table of mapping hits...
-[INFO:2026-01-30 08:51:42,564] Mapping hit table was saved to example/rescue_rules/UHR_chr22_rescue_mapping_hits.tsv
-[INFO:2026-01-30 08:51:42,567] --------------------------------------------------
-[INFO:2026-01-30 08:51:42,567]         Rescue-by-mapping for rules filter        
-[INFO:2026-01-30 08:51:42,567] --------------------------------------------------
-[INFO:2026-01-30 08:51:42,567] --------------------------------------------------
-[INFO:2026-01-30 08:51:42,567]               Rules rescue selected!              
-[INFO:2026-01-30 08:51:42,567] --------------------------------------------------
-[INFO:2026-01-30 08:51:42,567] Applying provided rules (--json_filter) to reference transcriptome classification file.
-[INFO:2026-01-30 08:51:43,806] Running rescue-by-mapping for rules filter.
-[INFO:2026-01-30 08:51:44,264] --------------------------------------------------
-[INFO:2026-01-30 08:51:44,264]              Generating rescued GTF.              
-[INFO:2026-01-30 08:51:44,264] --------------------------------------------------
-[INFO:2026-01-30 08:51:44,265] Final inclusion list written to file: example/rescue_rules/UHR_chr22_rescue_inclusion_list.tsv
-[INFO:2026-01-30 08:51:44,267] Final rescue table written to file: example/rescue_rules/UHR_chr22_rescue_table.tsv
-[INFO:2026-01-30 08:51:44,340] Final output GTF written to file:  example/rescue_rules/UHR_chr22_rescued.gtf
-[INFO:2026-01-30 08:51:44,432] Rescued FASTA written to file: example/rescue_rules/UHR_chr22_rescued.fasta
-[INFO:2026-01-30 08:51:44,510] Rescued classification written to file: example/rescue_rules/UHR_chr22_rescued_classification.txt
-[INFO:2026-01-30 08:51:44,511] --------------------------------------------------
-[INFO:2026-01-30 08:51:44,511]           Rescue finished successfully!           
-[INFO:2026-01-30 08:51:44,511] --------------------------------------------------
-[INFO:2026-01-30 08:51:44,511] --------------------------------------------------
-[INFO:2026-01-30 08:51:44,511]             Running requantification.             
-[INFO:2026-01-30 08:51:44,511] --------------------------------------------------
-[INFO:2026-01-30 08:51:44,515] Counts file parsed.
-[INFO:2026-01-30 08:51:44,549] Requantification of counts completed.
-[INFO:2026-01-30 08:51:44,549] New count table saved to example/rescue_rules/UHR_chr22_reassigned_counts.tsv
-[INFO:2026-01-30 08:51:44,615] Requantification finished!
+[WARNING:2026-05-13 12:48:29,688] Output directory example/rescue_rules already exists. Overwriting!
+[INFO:2026-05-13 12:48:29,764] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/rescue_rules/UHR_chr22_rescue_params.txt...
+[INFO:2026-05-13 12:48:29,765] Running SQANTI3 rescue pipeline version 6.0.1
+[INFO:2026-05-13 12:48:29,765] -----------------------------------------------------
+[INFO:2026-05-13 12:48:29,765]   Initializing SQANTI3 rescue pipeline in full mode  
+[INFO:2026-05-13 12:48:29,765] -----------------------------------------------------
+[INFO:2026-05-13 12:48:29,765] --------------------------------------------------
+[INFO:2026-05-13 12:48:29,765]         Reading filter classification file        
+[INFO:2026-05-13 12:48:29,765] --------------------------------------------------
+[INFO:2026-05-13 12:48:29,800] --------------------------------------------------
+[INFO:2026-05-13 12:48:29,800]            Performing automatic rescue            
+[INFO:2026-05-13 12:48:29,800] --------------------------------------------------
+[INFO:2026-05-13 12:48:29,876] --------------------------------------------------
+[INFO:2026-05-13 12:48:29,876]             Automatic rescue completed            
+[INFO:2026-05-13 12:48:29,876] --------------------------------------------------
+[INFO:2026-05-13 12:48:29,876] Creating reference transcriptome FASTA from provided GTF (--refGTF).
+[INFO:2026-05-13 12:48:30,257] Reference transcriptome FASTA was saved to example/rescue_rules/gencode.v38.basic_chr22.isoforms.fasta
+[INFO:2026-05-13 12:48:32,046] Mapping hits already exist, skipping mapping step.
+[INFO:2026-05-13 12:48:32,050] --------------------------------------------------
+[INFO:2026-05-13 12:48:32,050]         Rescue-by-mapping for rules filter        
+[INFO:2026-05-13 12:48:32,051] --------------------------------------------------
+[INFO:2026-05-13 12:48:32,051] --------------------------------------------------
+[INFO:2026-05-13 12:48:32,051]               Rules rescue selected!              
+[INFO:2026-05-13 12:48:32,051] --------------------------------------------------
+[INFO:2026-05-13 12:48:32,051] Applying provided rules (--json_filter) to reference transcriptome classification file.
+[INFO:2026-05-13 12:48:33,027] Running rescue-by-mapping for rules filter.
+[INFO:2026-05-13 12:48:33,527] --------------------------------------------------
+[INFO:2026-05-13 12:48:33,528]              Generating rescued GTF.              
+[INFO:2026-05-13 12:48:33,528] --------------------------------------------------
+[INFO:2026-05-13 12:48:33,529] Final inclusion list written to file: example/rescue_rules/UHR_chr22_rescue_inclusion_list.tsv
+[INFO:2026-05-13 12:48:33,532] Final rescue table written to file: example/rescue_rules/UHR_chr22_rescue_table.tsv
+[INFO:2026-05-13 12:48:33,608] Final output GTF written to file:  example/rescue_rules/UHR_chr22_rescued.gtf
+[INFO:2026-05-13 12:48:33,752] Rescued FASTA written to file: example/rescue_rules/UHR_chr22_rescued.fasta
+[INFO:2026-05-13 12:48:33,852] Rescued classification written to file: example/rescue_rules/UHR_chr22_rescued_classification.txt
+[INFO:2026-05-13 12:48:33,853] --------------------------------------------------
+[INFO:2026-05-13 12:48:33,853]           Rescue finished successfully!           
+[INFO:2026-05-13 12:48:33,853] --------------------------------------------------
+[INFO:2026-05-13 12:48:33,853] --------------------------------------------------
+[INFO:2026-05-13 12:48:33,853]             Running requantification.             
+[INFO:2026-05-13 12:48:33,853] --------------------------------------------------
+[INFO:2026-05-13 12:48:33,861] Counts file parsed.

@@ -1,43 +1,43 @@
-[WARNING:2026-01-29 15:33:29,282] Output directory example/QC_reference already exists. Overwriting!
-[INFO:2026-01-29 15:33:29,282] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38.qc_params.txt
-[INFO:2026-01-29 15:33:29,282] Initialising QC pipeline.
-[INFO:2026-01-29 15:33:29,282] Parsing provided files
-[INFO:2026-01-29 15:33:29,282] Reading genome fasta data/reference/GRCh38.p13_chr22.fasta
-[INFO:2026-01-29 15:33:29,500] **** Correcting sequences
-[INFO:2026-01-29 15:33:29,500] Error corrected FASTA /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.fasta already exists. Using it...
-[INFO:2026-01-29 15:33:29,500] **** Predicting ORF sequences...
-[INFO:2026-01-29 15:33:29,500] ORF file /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.faa already exists. Using it.
-[INFO:2026-01-29 15:33:29,515] **** Parsing Reference Transcriptome....
-[INFO:2026-01-29 15:33:29,515] example/QC_reference/refAnnotation_GencodeV38.genePred already exists. Using it.
-[INFO:2026-01-29 15:33:29,617] /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.genePred already exists. Using it.
-[INFO:2026-01-29 15:33:29,617] **** Parsing Isoforms.
-[INFO:2026-01-29 15:33:29,656] **** Running STAR for calculating Short-Read Coverage.
-[INFO:2026-01-29 15:33:29,656] Index identified.
-[INFO:2026-01-29 15:33:29,656] ** Running mapping.
-[INFO:2026-01-29 15:33:29,657] Mapping for UHR_Rep1_chr22: already completed.
-[INFO:2026-01-29 15:33:29,657] Mapping for UHR_Rep2_chr22: already completed.
-[INFO:2026-01-29 15:33:29,657] Input pattern: example/QC_reference/STAR_mapping/.
+[WARNING:2026-05-11 14:46:07,753] Output directory example/QC_reference already exists. Overwriting!
+[INFO:2026-05-11 14:46:07,754] Write arguments to /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38.qc_params.txt
+[INFO:2026-05-11 14:46:07,754] Initialising QC pipeline.
+[INFO:2026-05-11 14:46:07,754] Parsing provided files
+[INFO:2026-05-11 14:46:07,754] Reading genome fasta data/reference/GRCh38.p13_chr22.fasta
+[INFO:2026-05-11 14:46:07,943] **** Correcting sequences
+[INFO:2026-05-11 14:46:07,943] Error corrected FASTA /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.fasta already exists. Using it...
+[INFO:2026-05-11 14:46:07,943] **** Predicting ORF sequences...
+[INFO:2026-05-11 14:46:07,943] ORF file /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.faa already exists. Using it.
+[INFO:2026-05-11 14:46:07,962] **** Parsing Reference Transcriptome....
+[INFO:2026-05-11 14:46:07,962] example/QC_reference/refAnnotation_GencodeV38.genePred already exists. Using it.
+[INFO:2026-05-11 14:46:08,055] /home/pabloati/Programs/SQANTI_examples/example/QC_reference/GencodeV38_corrected.genePred already exists. Using it.
+[INFO:2026-05-11 14:46:08,055] **** Parsing Isoforms.
+[INFO:2026-05-11 14:46:08,092] **** Running STAR for calculating Short-Read Coverage.
+[INFO:2026-05-11 14:46:08,092] Index identified.
+[INFO:2026-05-11 14:46:08,092] ** Running mapping.
+[INFO:2026-05-11 14:46:08,093] Mapping for UHR_Rep1_chr22: already completed.
+[INFO:2026-05-11 14:46:08,093] Mapping for UHR_Rep2_chr22: already completed.
+[INFO:2026-05-11 14:46:08,093] Input pattern: example/QC_reference/STAR_mapping/.
 The following files found and to be read as junctions:
 example/QC_reference/STAR_mapping/UHR_Rep2_chr22SJ.out.tab
 example/QC_reference/STAR_mapping/UHR_Rep1_chr22SJ.out.tab
-[INFO:2026-01-29 15:33:29,726] 6762 junctions read. 2 junctions added to both strands because no strand information from STAR.
-[INFO:2026-01-29 15:33:29,727] **** Running calculation of TSS ratio
-[INFO:2026-01-29 15:33:29,900] BAM files identified: ['example/QC_reference/STAR_mapping/UHR_Rep2_chr22Aligned.sortedByCoord.out.bam', 'example/QC_reference/STAR_mapping/UHR_Rep1_chr22Aligned.sortedByCoord.out.bam']
-[INFO:2026-01-29 15:33:31,725] **** Reading CAGE Peak data.
-[INFO:2026-01-29 15:33:32,355] **** Reading PolyA motif list.
-[INFO:2026-01-29 15:33:32,356] **** Performing Classification of Isoforms
-[INFO:2026-01-29 15:33:37,166] Number of classified isoforms: 2428
-[INFO:2026-01-29 15:33:37,171] After classify fsm: 2428
-[INFO:2026-01-29 15:33:37,171] Full-length read abundance files not provided.
-[INFO:2026-01-29 15:33:37,171] RT-switching computation
-[INFO:2026-01-29 15:33:37,405] After RTS classification: 2428
-[INFO:2026-01-29 15:33:37,405] **** Adding TSS ratio data.
-[INFO:2026-01-29 15:33:37,407] **** Running Kallisto to calculate isoform expressions. 
-[INFO:2026-01-29 15:33:37,407] Kallisto quantification output example/QC_reference/kallisto_output/UHR_Rep1_chr22/abundance.tsv found. Using it.
-[INFO:2026-01-29 15:33:37,407] Kallisto quantification output example/QC_reference/kallisto_output/UHR_Rep2_chr22/abundance.tsv found. Using it.
-[INFO:2026-01-29 15:33:37,407] Detected Kallisto expression format. Using 'target_id' and 'tpm' field.
-[INFO:2026-01-29 15:33:37,413] Detected Kallisto expression format. Using 'target_id' and 'tpm' field.
-[INFO:2026-01-29 15:33:37,547] Writing output files
-[INFO:2026-01-29 15:33:38,025] **** Generating SQANTI3 report.
-[INFO:2026-01-29 15:34:03,043] Removing temporary files.
-[INFO:2026-01-29 15:34:03,043] SQANTI3 complete in 33.76 sec.
+[INFO:2026-05-11 14:46:08,164] 6762 junctions read. 2 junctions added to both strands because no strand information from STAR.
+[INFO:2026-05-11 14:46:08,164] **** Running calculation of TSS ratio
+[INFO:2026-05-11 14:46:08,330] BAM files identified: ['example/QC_reference/STAR_mapping/UHR_Rep2_chr22Aligned.sortedByCoord.out.bam', 'example/QC_reference/STAR_mapping/UHR_Rep1_chr22Aligned.sortedByCoord.out.bam']
+[INFO:2026-05-11 14:46:10,207] **** Reading CAGE Peak data.
+[INFO:2026-05-11 14:46:10,895] **** Reading PolyA motif list.
+[INFO:2026-05-11 14:46:10,895] **** Performing Classification of Isoforms
+[INFO:2026-05-11 14:46:15,877] Number of classified isoforms: 2428
+[INFO:2026-05-11 14:46:15,882] After classify fsm: 2428
+[INFO:2026-05-11 14:46:15,882] Full-length read abundance files not provided.
+[INFO:2026-05-11 14:46:15,882] RT-switching computation
+[INFO:2026-05-11 14:46:16,059] After RTS classification: 2428
+[INFO:2026-05-11 14:46:16,059] **** Adding TSS ratio data.
+[INFO:2026-05-11 14:46:16,062] **** Running Kallisto to calculate isoform expressions. 
+[INFO:2026-05-11 14:46:16,063] Kallisto quantification output example/QC_reference/kallisto_output/UHR_Rep1_chr22/abundance.tsv found. Using it.
+[INFO:2026-05-11 14:46:16,063] Kallisto quantification output example/QC_reference/kallisto_output/UHR_Rep2_chr22/abundance.tsv found. Using it.
+[INFO:2026-05-11 14:46:16,063] Detected Kallisto expression format. Using 'target_id' and 'tpm' field.
+[INFO:2026-05-11 14:46:16,068] Detected Kallisto expression format. Using 'target_id' and 'tpm' field.
+[INFO:2026-05-11 14:46:16,204] Writing output files
+[INFO:2026-05-11 14:46:16,710] **** Generating SQANTI3 report.
+[INFO:2026-05-11 14:46:38,329] Removing temporary files.
+[INFO:2026-05-11 14:46:38,329] SQANTI3 complete in 30.57 sec.
